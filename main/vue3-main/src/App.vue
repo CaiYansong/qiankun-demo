@@ -1,26 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div>Vue3 Main</div>
+    <ul>
+      <li
+        v-for="item in microApps"
+        :key="item.name"
+        @click="go(item.activeRule)"
+        :style="{margin: '12px', cursor: 'pointer'}"
+      >{{ item.name }}</li>
+    </ul>
+    <main>
+      <div id="container"></div>
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import microApps from './micro-apps';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      microApps,
+    };
+  },
+  methods: {
+    go(href) {
+      window.history.pushState({}, null, href);
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
