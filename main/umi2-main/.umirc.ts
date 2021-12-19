@@ -1,5 +1,7 @@
 import { IConfig } from 'umi-types';
 
+import microApps from './micro-apps';
+
 // ref: https://umijs.org/config/
 const config: IConfig =  {
   treeShaking: true,
@@ -13,6 +15,14 @@ const config: IConfig =  {
     }
   ],
   plugins: [
+    [
+      '@umijs/plugin-qiankun',
+      {
+        master: {
+          apps: microApps,
+        },
+      },
+    ],
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: true,

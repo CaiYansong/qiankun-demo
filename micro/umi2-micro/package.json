@@ -10,10 +10,11 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "dva": "^2.6.0-beta.6",
+    "@umijs/plugin-qiankun": "^1.7.0",
     "antd": "^3.19.5",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "dva": "^2.6.0-beta.6",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
@@ -30,8 +31,8 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "react-test-renderer": "^16.7.0",
-    "umi": "^2.9.0",
-    "umi-plugin-react": "^1.8.0",
+    "umi": "^2.13.17",
+    "umi-plugin-react": "^1.15.8",
     "umi-types": "^0.3.0"
   },
   "lint-staged": {

@@ -13,6 +13,7 @@ const config: IConfig =  {
     }
   ],
   plugins: [
+    '@umijs/plugin-qiankun',
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: true,
