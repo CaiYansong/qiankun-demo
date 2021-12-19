@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { registerMicroApps, start } from 'qiankun';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import microApps from './micro-apps';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,3 +18,7 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+registerMicroApps(microApps);
+// 启动 qiankun
+start();

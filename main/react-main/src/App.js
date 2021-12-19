@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import microApps from './micro-apps';
+
+function go(href) {
+  window.history.pushState({}, null, href);
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          React Main
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ul>
+          {microApps.map(item => (
+            <li style={{margin: '12px', cursor: 'pointer'}} onClick={() => { go(item.activeRule) }}>{ item.name }</li>
+          ))}
+        </ul>
       </header>
+      <main>
+        <div id='container'></div>
+      </main>
     </div>
   );
 }
