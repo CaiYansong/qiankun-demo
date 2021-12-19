@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 let app = null;
-let router = null;
+// let router = null;
 
 function render(props) {
   const { container } = props || {};
@@ -43,11 +43,13 @@ export async function mount(props) {
  * 应用每次 切出/卸载 会调用的方法，通常在这里我们会卸载微应用的应用实例
  */
 export async function unmount() {
-  app.unmount();
-  // eslint-disable-next-line no-underscore-dangle
-  app._container.innerHTML = '';
-  app = null;
-  router = null;
+  if (app) {
+    app.unmount();
+    // eslint-disable-next-line no-underscore-dangle
+    app._container.innerHTML = '';
+    app = null;
+  }
+  // router = null;
 }
 
 /**

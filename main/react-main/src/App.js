@@ -13,7 +13,11 @@ function App() {
         </p>
         <ul>
           {microApps.map(item => (
-            <li style={{margin: '12px', cursor: 'pointer'}} onClick={() => { go(item.activeRule) }}>{ item.name }</li>
+            <li
+              style={{ margin: '12px', cursor: 'pointer' }}
+              onClick={() => { go(item.activeRule) }}
+              key={item.activeRule}
+            >{item.name}</li>
           ))}
         </ul>
       </header>

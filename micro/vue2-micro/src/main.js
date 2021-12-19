@@ -35,6 +35,7 @@ if (!window.__POWERED_BY_QIANKUN__) {
  */
 export async function mount(props) {
   console.log('Vue2 mount', props);
+  render(props)
 }
 
 /**
@@ -42,9 +43,11 @@ export async function mount(props) {
  */
 export async function unmount(props) {
   console.log('Vue2 unmount', props);
-  instance.$destroy();
-  instance.$el.innerHTML = '';
-  instance = null;
+  if (instance) {
+    instance.$destroy();
+    instance.$el.innerHTML = '';
+    instance = null;
+  }
 }
 
 /**
