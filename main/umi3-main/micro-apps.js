@@ -28,6 +28,10 @@ const apps = [
 
 const microApps = apps.map((item) => ({
   ...item,
+  base: item.activeRule,
+  path: item.base,
+  microApp: item.name,
+  container: "#container",
 }));
 
 export default microApps;

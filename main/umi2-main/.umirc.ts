@@ -19,7 +19,36 @@ const config: IConfig =  {
       '@umijs/plugin-qiankun',
       {
         master: {
-          apps: microApps,
+          // 注册子应用信息
+          apps: [
+            {
+              name: "react-micro",
+              entry: "//localhost:18101",
+              base: "/react-micro",
+            },
+            {
+              name: "umi2-micro",
+              entry: "//localhost:18102",
+              base: "/umi2-micro",
+            },
+            {
+              name: "umi3-micro",
+              entry: "//localhost:18103",
+              base: "/umi3-micro",
+            },
+            {
+              name: "vue2-micro",
+              entry: "//localhost:18104",
+              base: "/vue2-micro",
+            },
+            {
+              name: "vue3-micro",
+              entry: "//localhost:18105",
+              base: "/vue3-micro",
+            },
+          ],
+          jsSandbox: true, // 是否启用 js 沙箱，默认为 false
+          prefetch: true, // 是否启用 prefetch 特性，默认为 true
         },
       },
     ],

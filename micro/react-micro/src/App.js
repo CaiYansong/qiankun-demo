@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Micro React
+          React Micro 
         </p>
       </header>
     </div>

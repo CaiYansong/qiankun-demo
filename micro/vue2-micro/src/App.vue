@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Micro Vue2
+    Vue2 Micro
   </div>
 </template>
 

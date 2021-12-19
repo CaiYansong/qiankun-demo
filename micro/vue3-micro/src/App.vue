@@ -1,6 +1,6 @@
 <template>
   <div>
-    Micro Vue3
+    Vue3 Micro
   </div>
 </template>
 
